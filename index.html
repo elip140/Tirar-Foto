@@ -1,27 +1,25 @@
 <html>
 <head>
-
-
+  <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
+<script></script>
+  <div class="area">
+			<video autoplay="true" id="webCamera"></video>
+	
+      <button type="button" onclick="loadCamera()">Usar camera</button>
+			<input type="text" id="base_img" name="base_img">
+			<button type="button" onclick="takeSnapShot()">Tirar foto e salvar</button>
+	
+			<img id="imagemConvertida">
+			<p id="caminhoImagem" class="caminho-imagem"><a href="" target="_blank" rel="noopener"></a></p>
+			<script src="main.js"></script>
 
-  <form method="POST" action="">
-    <input type="file" accept="image/*" capture="camera">
       
-  </form>
+      <input type="file" accept="image/*" capture="camera">
+      <button type="button" onclick="takeSnapShot()">Tirar foto e salvar</button>
+  </div>
 
-
-
-<!--<script type="text/javascript">
-
-  function hasGetUserMedia() {
-      return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
-  }
-  if (hasGetUserMedia()) {
-    // Good to go!
-  } else {
-    alert("getUserMedia() is not supported by your browser");
-  }
-</script>-->
+<script src="main.js"></script>
 </body>
 </html>
