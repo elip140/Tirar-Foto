@@ -7,9 +7,8 @@
   <div id="card">
     <video autoplay="true" id="webCam" style="display:none;"></video>
 
-    <button type="button" onclick="loadCamera()">Usar camera</button>
-    <input type="text" id="base_img" name="base_img">
-    <button type="button" onclick="takeSnapShot()">Tirar foto e salvar</button>
+    <button type="button" id="Btn_LoadCam" onclick="loadCamera()">Usar camera</button>
+    <button type="button" id="Btn_TirarFoto" onclick="takeSnapShot()" style="display:none;">Tirar foto e salvar</button>
 
     <img id="imagemConvertida">
     <p id="caminhoImagem" class="caminho-imagem"><a href="" target="_blank" rel="noopener"></a></p>
@@ -20,7 +19,8 @@
 
   <!--<div class="area">
     <button type="button" onclick="setFoto()">Foto</button>
-  </div>-->
+  </div>
+  <input type="text" id="base_img" name="base_img">-->
 
 <script src="main.js"></script>
 </body>

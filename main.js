@@ -25,12 +25,12 @@ function loadCamera(){
 			video.srcObject = stream;
 
 			// Mostra a camera
-			//document.getElementById("webCam").style.display = "block";
 			video.style.display = "block";
+			document.getElementById("Btn_TirarFoto").style.display = "block";
 		})
 		.catch(function(error) {
-			alert("Não foi possivel acessar a camera.");
 			video.style.display = "none";
+			alert("Não foi possivel acessar a camera.");
 		});
 	}
 	
@@ -49,7 +49,6 @@ function takeSnapShot(){
 	
 	//Criando o JPG
 	var dataURI = canvas.toDataURL('image/jpeg'); //O resultado é um BASE64 de uma imagem.
-	document.querySelector("#base_img").value = dataURI;
 	
 	sendSnapShot(dataURI);
 }
@@ -85,6 +84,7 @@ function sendSnapShot(base64){
         request.onerror = function() {
             alert("Erro ao salvar. Back-End inacessível.");
         }
-    
+
+		document.getElementById("Btn_TirarFoto").style.display = "block";
         request.send("base_img="+base64);
 }
