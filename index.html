@@ -3,23 +3,32 @@
   <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
+  <button type="button" id="Btn_Teste" onclick="forTests(1)">Testar tamanho video</button>
+  <button type="button" id="Btn_Teste" onclick="forTests(2)">Testar tamanho IMG</button>
 
-  <div id="card">
-    <video autoplay="true" id="webCam" style="display:none;"></video>
-
+  <div id="card" class="card">
     <button type="button" id="Btn_LoadCam" onclick="loadCamera()">Usar camera</button>
-    <button type="button" id="Btn_TirarFoto" onclick="takeSnapShot()" style="display:none;">Tirar foto e salvar</button>
 
-    <img id="imagemConvertida">
-    <p id="caminhoImagem" class="caminho-imagem"><a href="" target="_blank" rel="noopener"></a></p>
+    <div id="cam" style="display:none;">
+      <img id="teste">
+      <video autoplay="true" id="webCam" style="display:none;"></video><br>
+      <button type="button" id="Btn_TirarFoto" onclick="takeSnapShot()">Tirar foto e salvar</button>
+    </div>
+
+
+    <div id="foto" style="display: none;">
+      <img id="foto">
+      <p id="caminhoImagem" class="caminho-imagem"><a href="" target="_blank" rel="noopener"></a></p>
+    </div>
   </div>
   
 
-  <div id="overlay" onclick="off()"></div>
+  
 
   <!--<div class="area">
     <button type="button" onclick="setFoto()">Foto</button>
   </div>
+  <div id="overlay" onclick="off()"></div>
   <input type="text" id="base_img" name="base_img">-->
 
 <script src="main.js"></script>

@@ -25,11 +25,10 @@ function loadCamera(){
 			video.srcObject = stream;
 
 			// Mostra a camera
-			video.style.display = "block";
-			document.getElementById("Btn_TirarFoto").style.display = "block";
+			document.getElementById("cam").style.display = "block";
 		})
 		.catch(function(error) {
-			video.style.display = "none";
+			document.getElementById("cam").style.display = "none";
 			alert("Não foi possivel acessar a camera.");
 		});
 	}
@@ -60,8 +59,7 @@ function sendSnapShot(base64){
     request.open('POST', 'fotos.php', true);
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     request.onload = function() {
-			console.log(request.responseText);
-            console.log(request);
+
             if (request.status >= 200 && request.status < 400) {
                 //Colocar o caminho da imagem no SRC
                 var data = JSON.parse(request.responseText);
@@ -72,8 +70,8 @@ function sendSnapShot(base64){
                     return false;
                 }
     
-                //Mostrar informações
-                document.querySelector("#imagemConvertida").setAttribute("src", data.img);
+                //Coloca o base64 no IMG e atribui o caminho para o link
+                document.querySelector("#foto").setAttribute("src", base64);
                 document.querySelector("#caminhoImagem a").setAttribute("href", data.img);
                 document.querySelector("#caminhoImagem a").innerHTML = data.img.split("/")[1];
             } else {
@@ -82,9 +80,35 @@ function sendSnapShot(base64){
         };
     
         request.onerror = function() {
-            alert("Erro ao salvar. Back-End inacessível.");
+            alert("Erro ao salvar.");
         }
 
-		document.getElementById("Btn_TirarFoto").style.display = "block";
+		document.getElementById("cam").style.display = "none";
         request.send("base_img="+base64);
+}
+
+
+// Para testes de tamanho
+var i = 1;
+function forTests(c){
+	var s = "placeholders/placeholder"+i+".png";
+
+	// Para testar o video
+	if(c==1){
+		document.getElementById("cam").style.display = "block";
+		document.getElementById("foto").style.display = "none";
+
+		document.querySelector("#teste").setAttribute("src", s);
+	}
+	// Para testar a imagem
+	else if(c==2){
+		document.getElementById("cam").style.display = "none";
+		document.getElementById("foto").style.display = "block";
+
+		document.querySelector("#foto").setAttribute("src", s);
+	}
+
+	if(i>=4){
+		i = 1;
+	}
 }
