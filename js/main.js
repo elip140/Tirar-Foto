@@ -26,10 +26,12 @@ function loadCamera(){
 
 			// Mostra a camera
 			document.getElementById("cam").style.display = "block";
+			document.getElementById("aviso").style.display = "none";
 		})
 		.catch(function(error) {
 			document.getElementById("cam").style.display = "none";
-			alert("Não foi possivel acessar a camera.");
+			document.getElementById("aviso").style.display = "block";
+			toastr["error"]("ERRO", "Não foi possivel acessar a camera.");
 		});
 	}
 	
@@ -75,12 +77,12 @@ function sendSnapShot(base64){
                 document.querySelector("#caminhoImagem a").setAttribute("href", data.img);
                 document.querySelector("#caminhoImagem a").innerHTML = data.img.split("/")[1];
             } else {
-                alert( "Erro ao salvar. Tipo:" + request.status );
+				toastr["error"]("ERRO", "Erro ao salvar. Tipo:" + request.status);
             }
         };
     
         request.onerror = function() {
-            alert("Erro ao salvar.");
+            toastr["error"]("ERRO", "Erro ao salvar.");
         }
 
 		document.getElementById("cam").style.display = "none";
@@ -89,26 +91,23 @@ function sendSnapShot(base64){
 
 
 // Para testes de tamanho
-var i = 1;
 function forTests(c){
+	var i = (document.getElementById("TesteInp")).value;
 	var s = "placeholders/placeholder"+i+".png";
 
 	// Para testar o video
 	if(c==1){
 		document.getElementById("cam").style.display = "block";
-		document.getElementById("foto").style.display = "none";
+		document.getElementById("foto_display").style.display = "none";
 
 		document.querySelector("#teste").setAttribute("src", s);
 	}
 	// Para testar a imagem
 	else if(c==2){
 		document.getElementById("cam").style.display = "none";
-		document.getElementById("foto").style.display = "block";
+		document.getElementById("foto_display").style.display = "block";
 
 		document.querySelector("#foto").setAttribute("src", s);
 	}
-
-	if(i>=4){
-		i = 1;
-	}
 }
+
