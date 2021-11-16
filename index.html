@@ -15,9 +15,15 @@
       <button type="button" id="Btn_TirarFoto" onclick="takeSnapShot()">Tirar foto e salvar</button>
     </div>
 
+    <div id="aviso">
+      <h4>Aviso</h4>
+      <p>A funcionalidade de usar a webcam pode não ser compativel com versões mais antigas de alguns navegadores ou em sites HTTP.</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia#browser_compatibility">Lista de compatibilidade</a>
+    </div>
 
+    <img id="foto">
     <div id="foto" style="display: none;">
-      <img id="foto">
+      
       <p id="caminhoImagem" class="caminho-imagem"><a href="" target="_blank" rel="noopener"></a></p>
     </div>
   </div>

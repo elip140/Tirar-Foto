@@ -1,13 +1,13 @@
 //<script type="text/javascript"></script>
 //<input type="file" accept="image/*" capture="camera">
 
-function setFoto(){
+/*function setFoto(){
 	document.getElementById("overlay").style.display = "block";
 }
 
 function off(){
 	document.getElementById("overlay").style.display = "none";
-}
+}*/
 
 
 function loadCamera(){
