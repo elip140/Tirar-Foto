@@ -38,7 +38,7 @@
             };
 
             var previousToast;
-
+        
             return toastr;
 
             ////////////////
@@ -449,9 +449,7 @@
             }
 
             function getOptions() {
-                var i;
-                $.extend(i, getDefaults(), toastr.options);
-                return i;
+                return $.extend({}, getDefaults(), toastr.options);
             }
 
             function removeToast($toastElement) {
@@ -466,25 +464,6 @@
                     previousToast = undefined;
                 }
             }
-
-            function Teste(){
-                var object1 = {
-                    apple: 0,
-                    banana: { weight: 52, price: 100 },
-                    cherry: 97
-                  };
-                  var object2 = {
-                    banana: { price: 200 },
-                    durian: 100
-                  };
-                   
-                  // Merge object2 into object1
-                  $.extend( object1, object2 );
-                   
-                  // Assuming JSON.stringify - not available in IE<8
-                  $( "#log" ).append( JSON.stringify( object1 ) );
-            }
-
         })();
     });
 }(typeof define === 'function' && define.amd ? define : function (deps, factory) {

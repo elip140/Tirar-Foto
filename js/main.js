@@ -31,7 +31,7 @@ function loadCamera(){
 		.catch(function(error) {
 			document.getElementById("cam").style.display = "none";
 			document.getElementById("aviso").style.display = "block";
-			toastr["error"]("ERRO", "Não foi possivel acessar a camera.");
+			toastr["error"]("Não foi possivel acessar a camera.", "ERRO");
 		});
 	}
 	
@@ -77,12 +77,12 @@ function sendSnapShot(base64){
                 document.querySelector("#caminhoImagem a").setAttribute("href", data.img);
                 document.querySelector("#caminhoImagem a").innerHTML = data.img.split("/")[1];
             } else {
-				toastr["error"]("ERRO", "Erro ao salvar. Tipo:" + request.status);
+				toastr["error"]("Erro ao salvar. Tipo:" + request.status, "ERRO");
             }
         };
     
         request.onerror = function() {
-            toastr["error"]("ERRO", "Erro ao salvar.");
+            toastr["error"]( "Erro ao salvar.", "ERRO");
         }
 
 		document.getElementById("cam").style.display = "none";
