@@ -12,7 +12,7 @@
     cursor: pointer; /* Add a pointer on hover */
 }
 
-#card{
+#cardp{
     z-index: 3;
     padding-left: 2.5rem;
     padding-right: 2.5rem;

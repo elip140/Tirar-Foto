@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "d9sPrcpsTQzu8vlhE+kKcMG/WcrXgQEuChxeXlM/2EORcuy5MJIZCHFtzpe+d5omuN8bw/YAs72oRue41M6KFg==",
+  "dgSpecHash": "WqokikYa/fu1lZLy4+9GgIzLG3usLktAm2IObTSTmhhmmtg/Ht3LFLsTrzWGZfgoD6bCJAK6jT8KwyleGiQ9Yg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vieli\\Desktop\\Tirar-Foto-DOTNET\\Tirar-Foto-DOTNET.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\Tirar-Foto-DOTNET.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vieli\\.nuget\\packages\\jquery\\1.6.3\\jquery.1.6.3.nupkg.sha512",
+    "C:\\Users\\Vieli\\.nuget\\packages\\toastr\\2.1.1\\toastr.2.1.1.nupkg.sha512"
+  ],
   "logs": []
 }

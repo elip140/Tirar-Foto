@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vieli\\Desktop\\Tirar-Foto-DOTNET\\Tirar-Foto-DOTNET.csproj": {}
+    "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\Tirar-Foto-DOTNET.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vieli\\Desktop\\Tirar-Foto-DOTNET\\Tirar-Foto-DOTNET.csproj": {
+    "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\Tirar-Foto-DOTNET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vieli\\Desktop\\Tirar-Foto-DOTNET\\Tirar-Foto-DOTNET.csproj",
+        "projectUniqueName": "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\Tirar-Foto-DOTNET.csproj",
         "projectName": "Tirar-Foto-DOTNET",
-        "projectPath": "C:\\Users\\Vieli\\Desktop\\Tirar-Foto-DOTNET\\Tirar-Foto-DOTNET.csproj",
+        "projectPath": "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\Tirar-Foto-DOTNET.csproj",
         "packagesPath": "C:\\Users\\Vieli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vieli\\Desktop\\Tirar-Foto-DOTNET\\obj\\",
+        "outputPath": "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vieli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "toastr": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
