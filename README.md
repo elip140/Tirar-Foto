@@ -3,9 +3,6 @@ Pagina Web com o objetivo de tirar uma foto e manda-la
 
 TODO:
  - Fazer salvamento de dados em .NET/DOTNET
- - Inserir avisos de compatibilidade com navegadores por conta do getUserMedia
- - Avisar em caso de HTTPS
- - Usar notificação via toastr (codeseven.github.io/toastr/)
 
 
 Pagina HTML5 com JS:

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EAlt6Cv4BMELkDR5p8RQ43lBSAxUZ6QNuqQJgZgDqrI=",
+  "Hash": "+BFgN4gCOfnYCAJLmRMX5o/oth6E6ZYv3MOaQGUX6Zo=",
   "Source": "Tirar-Foto-DOTNET",
   "BasePath": "_content/Tirar-Foto-DOTNET",
   "Mode": "Default",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\wwwroot\\css\\toastr.css",
+      "SourceId": "Tirar-Foto-DOTNET",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\wwwroot\\",
+      "BasePath": "_content/Tirar-Foto-DOTNET",
+      "RelativePath": "css/toastr.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\toastr.css"
+    },
+    {
       "Identity": "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\wwwroot\\favicon.ico",
       "SourceId": "Tirar-Foto-DOTNET",
       "SourceType": "Discovered",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\wwwroot\\js\\toastr.js",
+      "SourceId": "Tirar-Foto-DOTNET",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\wwwroot\\",
+      "BasePath": "_content/Tirar-Foto-DOTNET",
+      "RelativePath": "js/toastr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\toastr.js"
     },
     {
       "Identity": "C:\\Users\\Vieli\\Documents\\GitHub\\Tirar-Foto\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",

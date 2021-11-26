@@ -56,12 +56,14 @@ function takeSnapShot(){
 	//Criando o JPG
 	var dataURI = canvas.toDataURL('image/jpeg'); //O resultado é um BASE64 de uma imagem.
 	
-	sendSnapShot(dataURI);
+	document.querySelector("#foto").setAttribute("src", dataURI);
+
+	//sendSnapShot(dataURI);
 }
 
 
 // Manda a foto para ser salva na pasta "Fotos" e a mostra para o usuario
-function sendSnapShot(base64){
+/*function sendSnapShot(base64){
     var request = new XMLHttpRequest();
     request.open('POST', 'fotos.php', true);
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
@@ -92,7 +94,7 @@ function sendSnapShot(base64){
 
 		document.getElementById("cam").style.display = "none";
         request.send("base_img="+base64);
-}
+}*/
 
 
 // Para testes de tamanho
