@@ -8,11 +8,11 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Tirar_Foto_DOTNET
 build_property.RootNamespace = Tirar_Foto_DOTNET
-build_property.ProjectDir = c:\Users\Vieli\Documents\GitHub\Tirar-Foto\
+build_property.ProjectDir = C:\Users\Vieli\Documents\GitHub\Tirar-Foto\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\Vieli\Documents\GitHub\Tirar-Foto
+build_property.MSBuildProjectDirectory = C:\Users\Vieli\Documents\GitHub\Tirar-Foto
 build_property._RazorSourceGeneratorDebug = 
 
 [c:/Users/Vieli/Documents/GitHub/Tirar-Foto/Pages/Error.cshtml]

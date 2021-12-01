@@ -7,6 +7,7 @@
 <div class="text-center">
     
     <button class="btn btn-primary" onclick="setPlaceholder()">Placeholder</button>
+    <button class="btn btn-primary" onclick="setTestFoto()">Set Teste Foto</button>
 
     <div id="cardp">
         <button type="button" class="btn btn-primary" id="Btn_LoadCam" onclick="loadCamera()">Usar camera</button>
@@ -17,13 +18,12 @@
         </div>
 
     
-        <form method="post" asp-page-handler="Send" id="foto_display" style="">
+        <form id="confirm" method="post" asp-page-handler="Send" id="foto_display" style="display:none;">
             <div class="row">
                 <div asp-validation-summary="All"></div>
             </div>
             <img id="foto">
             <input id="fotoBase64" type="hidden" asp-for="NewFoto.Base64" />
-            <!--<p id="caminhoImagem" class="caminho-imagem"><a href="" target="_blank" rel="noopener"></a></p>-->
             <button class="btn btn-primary">Adicionar</button>
         </form>
 
@@ -41,7 +41,7 @@
     <div class="row justify-content-center">
         @foreach (var f in Model.Lista)
         {
-            <div class="card p-4 col-4 m-2">
+            <div class="card p-4 col-3 m-2">
                 <img src="@f.Show()" class="card-img-top">
             </div>
         }

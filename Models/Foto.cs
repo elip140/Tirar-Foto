@@ -8,6 +8,7 @@ namespace TirarFoto.Models
         public int UID {get; set;}
         public string Nome {get; set;}
         
+        [Required]
         public string Base64 {get; set;}
 
         public Foto(){
