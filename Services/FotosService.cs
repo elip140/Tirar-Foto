@@ -17,9 +17,9 @@ namespace TirarFoto.FotosService
             byte[] imageArray3 = File.ReadAllBytes(@"Services/Placeholders/placeholder3.png");
             Lista = new List<Foto>
             {
-                new Foto(Convert.ToBase64String(imageArray1), "Placeholder1"){Id = 1, UID = 10001},
-                new Foto(Convert.ToBase64String(imageArray2), "Placeholder2"){Id = 2, UID = 10001},
-                new Foto(Convert.ToBase64String(imageArray3), "Placeholder3"){Id = 3, UID = 10001}
+                new Foto(){Id = 1, UID = 10001, Base64 = Convert.ToBase64String(imageArray1), Nome = "Placeholder1"},
+                new Foto(){Id = 2, UID = 10001, Base64 = Convert.ToBase64String(imageArray2), Nome = "Placeholder2"},
+                new Foto(){Id = 3, UID = 10001, Base64 = Convert.ToBase64String(imageArray3), Nome = "Placeholder3"}
             };
         }
 
@@ -27,7 +27,7 @@ namespace TirarFoto.FotosService
 
         public static Foto Get(int id) => Lista.FirstOrDefault(p => p.Id == id);
 
-        public static void Add(Foto f, string base64)
+        public static void Add(Foto f)
         {
             f.Id = nextID++;
             Lista.Add(f);

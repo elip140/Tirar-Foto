@@ -6,15 +6,12 @@ namespace TirarFoto.Models
     {
         public int Id {get; set;}
         public int UID {get; set;}
-        
-        [Required]
-        public string Base64 {get; set;}
         public string Nome {get; set;}
         
-        public Foto(string base64="", string nome="")
-        {
-            Base64 = base64;
-            Nome = nome;
+        public string Base64 {get; set;}
+
+        public Foto(){
+            Nome = "";
         }
 
         public string Show(){

@@ -14,15 +14,23 @@ public class IndexModel : PageModel
         _logger = logger;
     }
 
-    public List<Foto> Lista = new();
-    public Foto Placeholder = new();
-
     [BindProperty]
-    public Foto NewFoto { get; set; } = new();
+    public Foto NewFoto {get; set;} = new();
+
+    public List<Foto> Lista = FotosList.GetAll();
 
     public void OnGet()
     {
-        Placeholder = FotosList.Get(2);
-        Lista = FotosList.GetAll();
+        
+    }
+
+    public IActionResult OnPost()
+    {
+        if(!ModelState.IsValid)
+        {
+            return Page();
+        }
+            FotosList.Add(NewFoto);
+            return RedirectToAction("Get");
     }
 }
