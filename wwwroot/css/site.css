@@ -19,16 +19,10 @@ body {
 
 #cardp{
   z-index: 3;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-
-  margin: 3rem;
 
   background-color: rgb(252, 252, 252);
-  border: 0.2px solid lightgray;
-  border-radius: 3px;
+  /*border: 0.2px solid lightgray;
+  border-radius: 3px;*/
   text-align: center;
 }
 

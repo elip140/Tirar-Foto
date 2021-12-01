@@ -59,3 +59,13 @@ function takeSnapShot(){
 	document.querySelector("#foto").setAttribute("src", dataURI);
 	document.querySelector("#fotoBase64").setAttribute("value", dataURI.replace("data:image/png;base64,", ""));
 }
+
+function TryAgain()
+{
+	document.getElementById("Btn_LoadCam").style.display = "none";
+
+	document.getElementById("cam").style.display = "block";
+	document.getElementById("aviso").style.display = "none";
+	document.getElementById("webCam").style.display = "none";
+	document.getElementById("confirm").style.display = "none";
+}
