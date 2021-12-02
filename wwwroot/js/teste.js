@@ -11,13 +11,14 @@ var placeholder3 = "iVBORw0KGgoAAAANSUhEUgAAAMoAAAFoCAIAAACZpPOuAAAAAXNSR0IArs4c
 
 
 var P = 1;
+//Camera
 function setPlaceholder()
 {
 	document.getElementById("Btn_LoadCam").style.display = "none";
 
 	document.getElementById("cam").style.display = "block";
-	document.getElementById("aviso").style.display = "none";
 	document.getElementById("webCam").style.display = "none";
+	document.getElementById("aviso").style.display = "none";
 	document.getElementById("confirm").style.display = "none";
 
 
@@ -35,11 +36,18 @@ function setPlaceholder()
 }
 
 var I = 1;
+//Depois que a foto foi tirada
 function setTestAdicionar()
 {
-	document.getElementById("confirm").style.display = "block";
+	document.getElementById("Btn_LoadCam").style.display = "none";
+
+	
 	document.getElementById("cam").style.display = "none";
-	document.getElementById("webCam").style.display = "block";
+	document.getElementById("confirm").style.display = "block";
+	document.getElementById("aviso").style.display = "none";
+	
+	
+	//document.getElementById("webCam").style.display = "block";
 
 
 	if(I==1){
