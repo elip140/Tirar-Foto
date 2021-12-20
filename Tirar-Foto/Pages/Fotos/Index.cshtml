@@ -1,0 +1,37 @@
+@page
+@model Tirar_Foto.Pages_Fotos.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+<p>
+    <a asp-page="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<div class="conteiner-fluid">
+        <div class="row justify-content-center">
+            <h4>Listagem de fotos</h4>
+        </div>
+    <div class="row row-cols-auto justify-content-center text-center">
+        @*row row-cols-auto justify-content-center text-center*@
+        @foreach (var f in Model.Foto)
+        {
+            <div class="card col m-2">
+                <div class="row p-2 card-header">
+                @*<div class="col card-header">*@
+                    <h5>@f.Id - @f.Nome</h5>
+                </div>
+                @*</div>*@
+                <div class="row">
+                    <img class="img-fluid p-1" style="max-width: 25rem;" src="@f.Show()">
+                </div>
+                <br>
+                <div class="row row-cols-auto justify-content-center text-center card-footer">
+                    <a class="col btn btn-primary" asp-page="./Edit" asp-route-id="@f.Id">Edit</a>
+                    <a class="col ms-2 me-2 btn btn-primary" asp-page="./Details" asp-route-id="@f.Id">Details</a>
+                    <a class="col btn btn-primary" asp-page="./Delete" asp-route-id="@f.Id">Delete</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

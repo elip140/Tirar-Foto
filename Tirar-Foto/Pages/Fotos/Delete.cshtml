@@ -1,0 +1,39 @@
+@page "{id:int}"
+@model Tirar_Foto.Pages_Fotos.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Foto</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Foto.UID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Foto.UID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Foto.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Foto.Nome)
+        </dd>
+        <dt class="col">
+            @Html.DisplayNameFor(model => model.Foto.Base64)
+            <br>
+            <img class="img-fluid p-1" style="max-width: 25rem;" src="@Model.Foto.Show()" class="card-img-top">
+        </dt>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Foto.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

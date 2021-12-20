@@ -19,9 +19,9 @@ public class IndexModel : PageModel
 
     public List<Foto> Lista = FotosList.GetAll();
 
-    public void OnGet()
+    public async Task<IActionResult> OnGetAsync()
     {
-
+        return RedirectToPage("/Fotos/Index");
     }
 
     public IActionResult OnPost()
