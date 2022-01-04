@@ -26,11 +26,6 @@ public class IndexModel : PageModel
 
     public IActionResult OnPost()
     {
-        if (!ModelState.IsValid)
-        {
-            return Page();
-        }
-        FotosList.Add(NewFoto);
-        return RedirectToAction("Get");
+        return RedirectToPage("/Fotos/Index");
     }
 }
